@@ -1,6 +1,3 @@
-let rockbutton = document.getElementById("rock-button")
-let paperbutton = document.getElementById("papper-button")
-let sissorsbutton = document.getElementById("scissors-button")
 
 
 function compRand() {
@@ -23,11 +20,12 @@ function play(playerChoice) {
   if (playerChoice == compChoice) {
     drawResult("Lame - You tied")
   }
-  else if (playerChoice == "scissors") {
-    if (compChoice == "rock") {
-      drawResult("the computer chose rock, you lose");
+  else if (playerChoice == "rock") {
+    if (compChoice == "paper") {
+
+      drawResult("The computer chose paper, you lose");
     } else {
-      drawResult("The Computer chose paper , You win!!!")
+      drawResult("Computer chose scissors , You Win!!!")
     }
   }
   else if (playerChoice == "paper") {
@@ -37,12 +35,11 @@ function play(playerChoice) {
       drawResult("The computer chose scissors , you lose");
     }
   }
-  else if (playerChoice == "rock") {
-    if (compChoice == "paper") {
-
-      drawResult("The computer chose paper , you lose");
+  else if (playerChoice == "scissors") {
+    if (compChoice == "rock") {
+      drawResult("the computer chose rock, you lose");
     } else {
-      drawResult("Computer chose scissors , You Win!!!")
+      drawResult("The Computer chose paper , You win!!!")
     }
   }
 
@@ -50,6 +47,6 @@ function play(playerChoice) {
 }
 
 function drawResult(result) {
-  document.getElementById("phrase").innerHTML = `<p> "${result}" </p>`
+  document.getElementById("phrase").innerHTML = `<p> ${result} </p>`
 
 }
