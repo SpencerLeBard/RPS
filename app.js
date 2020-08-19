@@ -24,7 +24,7 @@ function play(playerChoice) {
   }
   else if (playerChoice == "scissors") {
     if (compChoice == "rock") {
-      console.log("you lose");
+      console.log("the computer chose rock, you lose");
     } else {
       console.log("you win");
     }
