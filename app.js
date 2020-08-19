@@ -18,29 +18,38 @@ function compRand() {
 
 function play(playerChoice) {
 
+
   let compChoice = compRand()
   if (playerChoice == compChoice) {
-    console.log("the computer also chose '${compChoice}' , you tie");
+    drawResult("Lame - You tied")
   }
   else if (playerChoice == "scissors") {
     if (compChoice == "rock") {
-      console.log("the computer chose rock, you lose");
+      drawResult("the computer chose rock, you lose");
     } else {
-      console.log("you win");
+      drawResult("The Computer chose paper , You win!!!")
     }
   }
   else if (playerChoice == "paper") {
     if (compChoice == "rock") {
-      console.log("you win");
+      drawResult("The Computer chose Rock, You Win!!!!!")
     } else {
-      console.log("you lose");
+      drawResult("The computer chose scissors , you lose");
     }
   }
   else if (playerChoice == "rock") {
     if (compChoice == "paper") {
-      console.log("you lose");
+
+      drawResult("The computer chose paper , you lose");
     } else {
-      console.log("you win");
+      drawResult("Computer chose scissors , You Win!!!")
     }
   }
+
+
+}
+
+function drawResult(result) {
+  document.getElementById("phrase").innerHTML = `<p> "${result}" </p>`
+
 }
