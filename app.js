@@ -18,11 +18,9 @@ function compRand() {
 
 function play(playerChoice) {
 
-
-  debugger
   let compChoice = compRand()
   if (playerChoice == compChoice) {
-    console.log("tie");
+    console.log("the computer also chose '${compChoice}' , you tie");
   }
   else if (playerChoice == "scissors") {
     if (compChoice == "rock") {
